@@ -14,8 +14,12 @@
 |---|---|
 | [`docs/brief/00_ORIGINAL_BRIEF.md`](docs/brief/00_ORIGINAL_BRIEF.md) | 原始題目與 Gemini 回覆（逐字保存） |
 | [`docs/brief/01_BRIEF_SUMMARY.zh-TW.md`](docs/brief/01_BRIEF_SUMMARY.zh-TW.md) | 題目整理與初步觀察 |
-| [`docs/research/SOFC_GW_RAIBA_MAPPING.zh-TW.md`](docs/research/SOFC_GW_RAIBA_MAPPING.zh-TW.md) | RAIBA 架構對應到 SOFC 電廠 |
-| [`docs/sources/LITERATURE_TO_VERIFY.md`](docs/sources/LITERATURE_TO_VERIFY.md) | 待查證文獻與事實清單 |
+| [`docs/research/SOFC_GW_RAIBA_MAPPING.zh-TW.md`](docs/research/SOFC_GW_RAIBA_MAPPING.zh-TW.md) | RAIBA 架構對應到 SOFC 電廠（含查證與模型後的更新） |
+| [`docs/research/LCOE_DEGRADATION_MODEL.zh-TW.md`](docs/research/LCOE_DEGRADATION_MODEL.zh-TW.md) | **LCOE ＋ 劣化模型：超額配置、RAIBA 架構比較、與 NGCC 比較、kill criteria** |
+| [`models/`](models/README.md) | 模型程式碼（Python），可重現 |
+| [`docs/sources/LITERATURE_TO_VERIFY.md`](docs/sources/LITERATURE_TO_VERIFY.md) | 待查證文獻與事實清單（含查證狀態） |
+| [`docs/sources/VERIFICATION_GEMINI_CITATIONS_2026-11-23.zh-TW.md`](docs/sources/VERIFICATION_GEMINI_CITATIONS_2026-11-23.zh-TW.md) | Gemini 7 筆引用的查證報告 |
+| [`docs/sources/FACTS_BLOOM_DEGRADATION_2026-11-23.zh-TW.md`](docs/sources/FACTS_BLOOM_DEGRADATION_2026-11-23.zh-TW.md) | Bloom 標竿、SOFC 劣化、成本、NGCC 的事實查核 |
 | [`docs/session/`](docs/session/) | 各次工作 session 的紀錄 |
 
 ## Evidence Layers
@@ -35,6 +39,7 @@
 SOFCTopics/
 ├── README.md
 ├── CLAUDE.md          # AI 工作區規則
+├── models/            # LCOE ＋ 劣化模型（Python）
 └── docs/
     ├── brief/         # 題目
     ├── research/      # 分析與架構
