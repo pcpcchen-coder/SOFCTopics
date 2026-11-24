@@ -24,13 +24,16 @@ OUT = Path(__file__).resolve().parent.parent / "results"
 SEEDS = (0, 1, 2)
 N_MOD = 50
 
-# ---- 情境值【暫定，待文獻查證後更新】來源將整理於 docs/sources/THERMAL_CYCLING_SERVICE_2026-11-24.zh-TW.md ----
-# v_loss：每次完整熱循環的電壓損失（比例）；p_leak：每次循環電堆洩漏／失效機率
-# direct：每次開箱直接成本 $；downtime_days：降溫＋換堆＋升溫天數
+# ---- 文獻情境（出處見 docs/sources/THERMAL_CYCLING_SERVICE_2026-11-24.zh-TW.md）----
+# v_loss：每次完整熱循環的電壓損失（比例）【外部區間；取哪個值依設計成熟度，屬假說】
+#   低 0.01%（Delphi Gen4、Jülich、FCE 堆）；中 0.1%（FCE cell、Honeywell 0.23%）；高 0.8%（Pan 2020、Versa 出廠門檻）
+# p_leak：每次循環單堆洩漏／失效機率【假說：沒有統計數據】
+# direct：每次開箱直接成本 $【假說：沒有公開數據；以 NETL 人工費率 $38.5/h×1.3 加吊裝、耗材推估】
+# downtime_days：降溫＋換堆＋升溫【單堆 10 h、GE 系統 2.5 天為外部；熱箱 1–5 天為假說】
 SCENARIOS = {
-    "低（金屬支撐／最佳實務）": dict(v_loss=0.0005, p_leak=0.0, direct=10000.0, downtime_days=7),
-    "中（陽極支撐、良好密封）": dict(v_loss=0.005, p_leak=0.002, direct=30000.0, downtime_days=14),
-    "高（陽極支撐、玻璃密封）": dict(v_loss=0.02, p_leak=0.01, direct=60000.0, downtime_days=30),
+    "低（成熟設計）": dict(v_loss=0.0001, p_leak=0.0001, direct=5000.0, downtime_days=1),
+    "中（文獻中央值）": dict(v_loss=0.001, p_leak=0.002, direct=20000.0, downtime_days=3),
+    "高（不成熟設計）": dict(v_loss=0.008, p_leak=0.01, direct=50000.0, downtime_days=5),
 }
 
 
@@ -62,7 +65,7 @@ def main():
 
     # 2) 二維掃描：直接成本 × 每次循環電壓損失
     directs = [3000.0, 10000.0, 20000.0, 40000.0, 80000.0]
-    vlosses = [0.0, 0.0025, 0.005, 0.01, 0.02]
+    vlosses = [0.0, 0.001, 0.0025, 0.005, 0.01]
     Z = np.zeros((len(vlosses), len(directs)))
     for i, v in enumerate(vlosses):
         for k, d in enumerate(directs):

@@ -18,6 +18,8 @@
 | [`docs/research/SOFC_GW_RAIBA_MAPPING.zh-TW.md`](docs/research/SOFC_GW_RAIBA_MAPPING.zh-TW.md) | RAIBA 架構對應到 SOFC 電廠（含查證與模型後的更新） |
 | [`docs/research/LCOE_DEGRADATION_MODEL.zh-TW.md`](docs/research/LCOE_DEGRADATION_MODEL.zh-TW.md) | **LCOE ＋ 劣化模型：超額配置、RAIBA 架構比較、與 NGCC 比較、kill criteria** |
 | [`models/`](models/README.md) | 模型程式碼（Python），可重現 |
+| [`docs/research/HOTBOX_OPENING_COST.zh-TW.md`](docs/research/HOTBOX_OPENING_COST.zh-TW.md) | **開箱代價的量化：熱循環文獻、代價拆解、RAIBA 進／停分界** |
+| [`docs/sources/THERMAL_CYCLING_SERVICE_2026-11-24.zh-TW.md`](docs/sources/THERMAL_CYCLING_SERVICE_2026-11-24.zh-TW.md) | 熱循環、redox、熱箱維修停機的文獻查證 |
 | [`docs/sources/LITERATURE_TO_VERIFY.md`](docs/sources/LITERATURE_TO_VERIFY.md) | 待查證文獻與事實清單（含查證狀態） |
 | [`docs/sources/VERIFICATION_GEMINI_CITATIONS_2026-11-23.zh-TW.md`](docs/sources/VERIFICATION_GEMINI_CITATIONS_2026-11-23.zh-TW.md) | Gemini 7 筆引用的查證報告 |
 | [`docs/sources/FACTS_BLOOM_DEGRADATION_2026-11-23.zh-TW.md`](docs/sources/FACTS_BLOOM_DEGRADATION_2026-11-23.zh-TW.md) | Bloom 標竿、SOFC 劣化、成本、NGCC 的事實查核 |
