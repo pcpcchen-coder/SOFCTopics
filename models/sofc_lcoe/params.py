@@ -81,7 +81,8 @@ class Params:
     module_service_months: int = 1         # 模組維修停機（降溫、換堆、升溫）[假說]
     module_service_cost: float = 20000.0   # 每次開熱箱的人工、吊裝、耗材 $（模組約 350 kW）[假說]
     # 熱循環懲罰：模組維修要降溫再升溫，未更換的電堆每經歷一次熱循環，
-    # ASR 增加「EOL 裕度 × 此比例」。0.02 約等於每次循環電壓損失 0.5%（δ=25% 時）[未知，需實驗數據]
+    # ASR 增加「EOL 裕度 × 此比例」。換算見 service_cost.py：在 j0=0.31、δ=25% 下，
+    # 0.02 ≈ 每次循環電壓損失 0.28%；1% 電壓損失 ≈ 0.071 [文獻範圍見 docs/sources/THERMAL_CYCLING_*]
     thermal_cycle_penalty: float = 0.02
 
     # ---------------- RAIBA 增量 ----------------
