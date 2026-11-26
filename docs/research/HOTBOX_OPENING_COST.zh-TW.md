@@ -5,6 +5,8 @@
 > 原始輸出：[`models/results/SERVICE_COST.md`](../../models/results/SERVICE_COST.md)
 > 文獻：[`../sources/THERMAL_CYCLING_SERVICE_2026-11-24.zh-TW.md`](../sources/THERMAL_CYCLING_SERVICE_2026-11-24.zh-TW.md)
 
+> **2026-11-26 更正：** 本文的 K2 判定（例如直接成本 ≥ 約 $33k 為「進」）是以「每個電堆一台 DC/DC」的粒度算的。實際只能做到 4–5 堆一群，以群級粒度計，K2 在既有假設下為「停」（−0.52%），只有固定串聯的非計畫開箱有明顯額外代價時才回到有條件；開箱直接成本很高時，贏的是小模組整個抽換。見 [`LCOE_DEGRADATION_MODEL.zh-TW.md`](LCOE_DEGRADATION_MODEL.zh-TW.md) 第 4.1 節與 [RAIBA repo `docs/sofc-gw/03_raiba_proscons/`](https://github.com/pcpcchen-coder/RAIBA/blob/main/docs/sofc-gw/03_raiba_proscons/RAIBA_PROS_CONS.zh-TW.md)。
+
 ## 0. 結論
 
 1. **熱循環傷害比原本假設的小。**

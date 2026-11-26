@@ -227,6 +227,22 @@ min Σ [ c_ASR·dASR_i/dt + c_fuel·j_i ]，限制條件 Σ p_i = P_target。
 4. **電堆級 DC/DC 的增量成本與損失。** → 決定 K3。
 5. **大規模量產下的系統資本支出。** → 決定 K5。
 
+### 4.1 2026-11-26 更新：K1–K5 都已決定
+
+> 依據是第三輪研究（放在 RAIBA repo 的 [`docs/sofc-gw/`](https://github.com/pcpcchen-coder/RAIBA/blob/main/docs/sofc-gw/README.zh-TW.md)）。本節記錄專案負責人採用的決定；上面的表保留 2026-11-23 的原始版本，**判定欄已被本節取代**。新數字都是【假說，模型輸出】。
+
+**最重要的更正：上表 K2、K3、K4 的「基準結果」是以「每個電堆一台 DC/DC」的粒度算的。** 導線必須穿出 600–850°C 的熱箱，實際只能做到 4–5 堆一群；20 堆的熱箱只有 4 群，一堆故障就讓四分之一個熱箱離線，「先隔離、累積幾個再開箱」幾乎沒有空間。改成同樣的群級粒度後，毛效益從 1.80 降到 0.21 $/MWh，對應的毛損益兩平只有約 $14/kW，不是 $107–157/kW。詳見 [`03_raiba_proscons/RAIBA_PROS_CONS.zh-TW.md`](https://github.com/pcpcchen-coder/RAIBA/blob/main/docs/sofc-gw/03_raiba_proscons/RAIBA_PROS_CONS.zh-TW.md) 第 3.1、4 節。
+
+| # | 門檻 | 新判定 | 決定日 | 依據 |
+|---|---|---|---|---|
+| K1 | 不改。結果須同時以「第三輪方向 1 的中情境分項成本」與「原 $2,000/kW 基準」兩組成本報告 | **有條件**：關鍵仍是現場劣化率（中情境成本下最佳點超額配置 37–63%，0.2%/kh 時電堆 25 年內不必換） | 2026-11-26 | [`01_cost`](https://github.com/pcpcchen-coder/RAIBA/blob/main/docs/sofc-gw/01_cost/COST_SCALEUP.zh-TW.md) 第 9 節 |
+| K2 | 不改。計算改為群級粒度（4–5 堆一群），並以換堆全口徑成本（含 Bloom 服務成本推估口徑）重跑，**後者尚未執行** | **停**：−0.52%（−1.13% 到 +0.21%；基準沒有模組級 DC/DC 時 −1.86%）。固定串聯的非計畫開箱每次另加約 $20k 時 +2.62%，回到**有條件**；該額外代價是【未知】 | 2026-11-26 | [`03_raiba_proscons`](https://github.com/pcpcchen-coder/RAIBA/blob/main/docs/sofc-gw/03_raiba_proscons/RAIBA_PROS_CONS.zh-TW.md) 第 4、9 節 |
+| K3 | **改。** 比較基準改為同粒度的毛效益。兩條同時成立：(1) 含損耗的等效增量 ≤ 同粒度毛損益兩平的一半；(2) 含加成的資本增量 ≤ 整廠 3% | R-group（5 堆一群）以既有假設為**停**（等效增量 $27 > $7）；非計畫開箱另加約 $20k 時為**有條件**（基準已有模組級 DC/DC：$27 ≤ $68 通過；基準沒有：$71 不通過）。R-full（每堆一台）**停** | 2026-11-25 採用、2026-11-26 修改 | 電力電子成本見 [`sources/R4_STACK_DCDC_COST.zh-TW.md`](https://github.com/pcpcchen-coder/RAIBA/blob/main/docs/sofc-gw/sources/R4_STACK_DCDC_COST.zh-TW.md)；決定見 `03_raiba_proscons` 第 9 節 |
+| K4 | 不改 | **弱**：群級粒度下每堆交付電量 1,041 → 1,051 MWh，+0.9% | 2026-11-26 | `03_raiba_proscons` 第 9 節 |
+| K5 | 判準保留，改成可追蹤的形式：門檻以每 kW 淨輸出表示；NGCC 基準 $2,015/kW（範圍 $1,770–2,260，2028–2031 年投運的美國案例）；上表的「$1,720」是三參數加總口徑。加時間觸發：全球累計 20 GW 時，GW 級訂單的整廠價格若仍高於約 $2,600/kW，判定 GW 級商用電廠不成立 | **以現況價格不成立**：今天的價格層級約 $3,916/kW，高於比值 1.2 的門檻 $2,584–3,114/kW；打平門檻 $1,841–2,281/kW | 2026-11-25 | [`01_cost`](https://github.com/pcpcchen-coder/RAIBA/blob/main/docs/sofc-gw/01_cost/COST_SCALEUP.zh-TW.md) 第 4、9 節 |
+
+**對 RAIBA 主線的含意：** 以既有假設，RAIBA 在 GW 級 SOFC 上不值得做；只在兩個條件下值得：(1) 固定串聯遇到突發故障時有明顯的額外代價；(2) 熱箱大到 40–60 堆（700 kW–1 MW），一箱有 8–12 群。開箱很貴、故障很多時，贏的是 Bloom 式小模組整個抽換。所以上面「最需要量測的」第 1 項（開箱代價）仍是第一優先，但要加上「固定串聯被迫立即開箱時的額外代價」這一項。
+
 ---
 
 ## 5. 模型限制
