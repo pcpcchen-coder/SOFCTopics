@@ -17,7 +17,8 @@
 | [`docs/brief/02_ORIGINAL_BRIEF_TRANSLATION.zh-TW.md`](docs/brief/02_ORIGINAL_BRIEF_TRANSLATION.zh-TW.md) | 原始題目與 Gemini 回覆的中文逐字翻譯（附查證註記） |
 | [`docs/brief/01_BRIEF_SUMMARY.zh-TW.md`](docs/brief/01_BRIEF_SUMMARY.zh-TW.md) | 題目整理與初步觀察 |
 | [`docs/research/SOFC_GW_RAIBA_MAPPING.zh-TW.md`](docs/research/SOFC_GW_RAIBA_MAPPING.zh-TW.md) | RAIBA 架構對應到 SOFC 電廠（含查證與模型後的更新） |
-| [`docs/research/LCOE_DEGRADATION_MODEL.zh-TW.md`](docs/research/LCOE_DEGRADATION_MODEL.zh-TW.md) | **LCOE ＋ 劣化模型：超額配置、RAIBA 架構比較、與 NGCC 比較、kill criteria** |
+| [`docs/research/LCOE_DEGRADATION_MODEL.zh-TW.md`](docs/research/LCOE_DEGRADATION_MODEL.zh-TW.md) | **LCOE ＋ 劣化模型：超額配置、RAIBA 架構比較、與 NGCC 比較、kill criteria（第 4.1 節：2026-11-26 已決定的 K1–K5）** |
+| [RAIBA repo `docs/sofc-gw/`](https://github.com/pcpcchen-coder/RAIBA/blob/main/docs/sofc-gw/README.zh-TW.md) | **第三輪研究（2026-11-25～26）：放大規模的成本、預測性維護規劃、RAIBA 導入的優缺點**，各有主文件、模型、Word、簡報、互動動畫 |
 | [`models/`](models/README.md) | 模型程式碼（Python），可重現 |
 | [`docs/research/HOTBOX_OPENING_COST.zh-TW.md`](docs/research/HOTBOX_OPENING_COST.zh-TW.md) | **開箱代價的量化：熱循環文獻、代價拆解、RAIBA 進／停分界** |
 | [`docs/sources/THERMAL_CYCLING_SERVICE_2026-11-24.zh-TW.md`](docs/sources/THERMAL_CYCLING_SERVICE_2026-11-24.zh-TW.md) | 熱循環、redox、熱箱維修停機的文獻查證 |
