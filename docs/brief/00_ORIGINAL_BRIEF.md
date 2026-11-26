@@ -1,7 +1,7 @@
 # 00 — Original Brief（原始題目，逐字保存）
 
 > 本檔逐字保存專案起點的題目與 Gemini 文獻回覆，不做修改。
-> 整理後的中文版本見 [`01_BRIEF_SUMMARY.zh-TW.md`](./01_BRIEF_SUMMARY.zh-TW.md)。
+> 中文逐字翻譯見 [`02_ORIGINAL_BRIEF_TRANSLATION.zh-TW.md`](./02_ORIGINAL_BRIEF_TRANSLATION.zh-TW.md)；整理後的中文版本見 [`01_BRIEF_SUMMARY.zh-TW.md`](./01_BRIEF_SUMMARY.zh-TW.md)。
 > 記錄日期：2026-11-23
 
 ---
