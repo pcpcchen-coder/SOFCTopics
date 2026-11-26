@@ -14,6 +14,7 @@
 |---|---|
 | [`reports/`](reports/README.md) | **彙整報告：Word 報告與 PowerPoint 簡報（2026-11-23）** |
 | [`docs/brief/00_ORIGINAL_BRIEF.md`](docs/brief/00_ORIGINAL_BRIEF.md) | 原始題目與 Gemini 回覆（逐字保存） |
+| [`docs/brief/02_ORIGINAL_BRIEF_TRANSLATION.zh-TW.md`](docs/brief/02_ORIGINAL_BRIEF_TRANSLATION.zh-TW.md) | 原始題目與 Gemini 回覆的中文逐字翻譯（附查證註記） |
 | [`docs/brief/01_BRIEF_SUMMARY.zh-TW.md`](docs/brief/01_BRIEF_SUMMARY.zh-TW.md) | 題目整理與初步觀察 |
 | [`docs/research/SOFC_GW_RAIBA_MAPPING.zh-TW.md`](docs/research/SOFC_GW_RAIBA_MAPPING.zh-TW.md) | RAIBA 架構對應到 SOFC 電廠（含查證與模型後的更新） |
 | [`docs/research/LCOE_DEGRADATION_MODEL.zh-TW.md`](docs/research/LCOE_DEGRADATION_MODEL.zh-TW.md) | **LCOE ＋ 劣化模型：超額配置、RAIBA 架構比較、與 NGCC 比較、kill criteria** |
