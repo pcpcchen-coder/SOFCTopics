@@ -21,7 +21,7 @@
 
 | # | 主張 | 查證結論 | 狀態 |
 |---|---|---|---|
-| A | 新建 NGCC 的 LCOE | Lazard 2026：$51–129/MWh；EIA AEO2026：$55.5（不受 111 規則限制）～$77.5/MWh | 已查證 |
+| A | 新建 NGCC 的 LCOE | Lazard 2026：$51–129/MWh（v19.0 p.7；資本 $1,450–2,100/kW，p.28；高造價示意值 $2,400–2,600/kW，p.7 註 9）；EIA AEO2026：$55.5（不受 111 規則限制）～$77.5/MWh | 已查證（2026-11-27 補頁碼，見 [RAIBA 查證筆記](https://github.com/pcpcchen-coder/RAIBA/blob/main/docs/sofc-gw/04_ngcc_vs_sofc/evidence/LAZARD_NGCC_CHECK.zh-TW.md)） |
 | B | Bloom 的 GW 級交易 | AEP 最多 1 GW（2024-11）；AEP–Google 702 MW / $4B（2026-10，次級來源）；Brookfield 最多 $5B 融資架構（2025-10）；Oracle 最多 2.8 GW（2026-04） | 部分查證（AEP 選擇權的 MW 數、AEP–Google 一手申報未讀） |
 | C | 商用電堆壽命與更換週期 | Bloom：2014–15 年批次中位數 4.9 年，2018 年後的批次預估 ≥5 年；NETL 2022 假設 7.3 年 | 已查證 |
 | D | 劣化率與電流密度、溫度的關係 | 劣化率：0.2%/kh（NETL、Ceres）～0.5%/kh（Jülich 平均）～1–1.5%/kh（DOE 系統現況）。**對電流密度的依賴文獻互相矛盾，沒有通用式** | 部分查證 |

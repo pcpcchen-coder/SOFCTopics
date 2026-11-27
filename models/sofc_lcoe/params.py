@@ -140,7 +140,7 @@ CAPEX_SCENARIOS = {
 @dataclass
 class NGCC:
     """新建 NGCC 比較基準。"""
-    capex_per_kW: float = 1800.0       # [外部] Lazard LCOE+ 2026：$1,450–2,100/kW，取中間
+    capex_per_kW: float = 1800.0       # [假說，取值] Lazard LCOE+ 2026 v19.0 p.28 區間 $1,450–2,100/kW 取中間並取整（中點 $1,775）；Lazard 未公布中值。另有高造價示意值 $2,400–2,600（p.7 註 9），未採用。2026-11-27 查證
     efficiency_lhv: float = 0.58       # [外部＋換算] Lazard 熱耗率 6,475–6,550 Btu/kWh (HHV) ≈ 58% LHV
     capacity_factor: float = 0.85      # [假說] 基載；Lazard 範圍 30–90%
     fom_per_kW_yr: float = 15.0        # [假說]

@@ -105,7 +105,7 @@ min Σ [ c_ASR·dASR_i/dt + c_fuel·j_i ]，限制條件 Σ p_i = P_target。
 | 每次開箱成本 | $20,000 | 【未知】 |
 | 熱循環懲罰 | 每次消耗 2% 的 EOL 裕度（約等於電壓損失 0.5%） | 【未知】 |
 | RAIBA 增量 | $50/kW、0.5 個效率點 | 【假說】 |
-| NGCC | $1,800/kW、58% LHV、容量因數 0.85 | 【外部】Lazard 2026（資本、熱耗率）；其餘為【假說】 |
+| NGCC | $1,800/kW、58% LHV、容量因數 0.85 | 資本：【假說，取值】取 Lazard 2026 區間 $1,450–2,100 的中間並取整（中點 $1,775），Lazard 未公布中值；熱耗率【外部】Lazard 2026；其餘為【假說】。Lazard 另有 $2,400–2,600 的高造價示意值，見 [RAIBA 查證筆記](https://github.com/pcpcchen-coder/RAIBA/blob/main/docs/sofc-gw/04_ngcc_vs_sofc/evidence/LAZARD_NGCC_CHECK.zh-TW.md)（2026-11-27） |
 
 ---
 
